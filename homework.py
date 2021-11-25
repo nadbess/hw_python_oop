@@ -1,5 +1,6 @@
 class InfoMessage:
     """Информационное сообщение о тренировке."""
+
     def __init__(
             self,
             training_type: str,
@@ -59,6 +60,7 @@ class Training:
 
 class Running(Training):
     """Тренировка: бег."""
+
     def __init__(self,
                  action: int,
                  duration: float,
@@ -115,8 +117,7 @@ def read_package(workout_type: str, data: list) -> Training:
                     'SWM': Swimming}
     if workout_type in dict_workout.keys():
         return dict_workout[workout_type](*data)
-    else:
-        print('There is no such workout')
+    return print('There is no such workout')
 
 
 def main(training: Training) -> None:
