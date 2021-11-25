@@ -74,6 +74,7 @@ class Running(Training):
 
 class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
+    
     def __init__(self,
                  action: int,
                  duration: float,
